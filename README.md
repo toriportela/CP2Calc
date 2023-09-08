@@ -1,2 +1,11 @@
 # CP2Calc
-Ferramenta prática para ajudar os alunos/professores do Colégio Pedro II.
+Uma calculadora simples para ajudar alunos/professores/etc do Colégio Pedro II nas notas.
+
+Recursos:
+
+- Calcula a média anual
+- Calcula a nota mínima pra 3ª certificação
+- Calcula a nota mínima pra PFV
+- É responsivo
+
+-----------------------------------------------------------------------------------------
