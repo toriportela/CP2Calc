@@ -26,8 +26,12 @@
 
   <p id="mediaAnualResultado"></p>
 </div>
-
+<button onclick="voltarParaIndex()">Voltar para a Página Inicial</button>
 <script>
+
+function voltarParaIndex() {
+  window.location.href = "index.html"; 
+}
 
 function calcularMediaAnual() {
   const nota1 = parseFloat(document.getElementById("nota1").value);
