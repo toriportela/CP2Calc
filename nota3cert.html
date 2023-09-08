@@ -21,13 +21,25 @@
 
     <label for="mediaDesejada">Média desejada (opcional):</label>
     <input type="number" id="mediaDesejada" step="0.01" placeholder="Padrão: 6">
+    
 
     <button onclick="calcularNotaTerceiraCertificacao()">Calcular Nota Mínima</button>
+    <span id="infoIcon" onclick="mostrarInfo()"> * </span>
+    <span id="infoText" style="display: none;">Até 2023, a média anual para passar de ano direto é 6, mas caso tenha mudado você pode alterá-la inserindo a nova média na média desejada.</span>
 
     <p id="resultado3Cert"></p>
   </div>
 
   <script>
+    function mostrarInfo() {
+  const infoText = document.getElementById("infoText");
+  if (infoText.style.display === "none") {
+    infoText.style.display = "inline"; 
+  } else {
+    infoText.style.display = "none"; 
+  }
+}
+
     function calcularNotaTerceiraCertificacao() {
       const nota1Cert = parseFloat(document.getElementById("nota1Cert").value);
       const nota2Cert = parseFloat(document.getElementById("nota2Cert").value);
@@ -43,6 +55,6 @@
       document.getElementById("resultado3Cert").textContent = `Você precisa tirar pelo menos ${notaMinima3Cert.toFixed(2)} na terceira certificação para alcançar a média desejada de ${mediaDesejada.toFixed(2)}.`;
     }
   </script>
- <!-- colocar um p que diz sobre a média desejada -->
+
 </body>
 </html>

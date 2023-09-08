@@ -166,3 +166,8 @@ button:active {
   z-index: -1;
   transition: all .3s ease-in-out;
 }
+
+#infoIcon {
+  color: red;
+  cursor: pointer;
+}
