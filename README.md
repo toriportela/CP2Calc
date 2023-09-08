@@ -6,6 +6,5 @@ Recursos:
 - Calcula a média anual
 - Calcula a nota mínima pra 3ª certificação
 - Calcula a nota mínima pra PFV
-- É responsivo
 
 -----------------------------------------------------------------------------------------
