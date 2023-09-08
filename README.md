@@ -1,5 +1,5 @@
 # CP2Calc
-Uma calculadora simples para ajudar alunos/professores/etc do Colégio Pedro II nas notas.
+Uma calculadora simples para ajudar alunos do Colégio Pedro II nas notas.
 
 Recursos:
 
