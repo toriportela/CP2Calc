@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <link rel="shortcut icon" type="imagex/png" href="logocalc.png">
+  <title>Nota mínima 3ª Certificação</title>
+</head>
+<body>
+
+  <div class="padrao">
+    <h2>Cálculo da nota mínima para a 3ª certificação</h2>
+    <p>Insira as notas da 1ª e 2ª certificação:</p>
+
+    <label for="nota1Cert">1ª Certificação:</label>
+    <input type="number" id="nota1Cert" step="0.01">
+
+    <label for="nota2Cert">2ª Certificação:</label>
+    <input type="number" id="nota2Cert" step="0.01">
+
+    <label for="mediaDesejada">Média desejada (opcional):</label>
+    <input type="number" id="mediaDesejada" step="0.01" placeholder="Padrão: 6">
+
+    <button onclick="calcularNotaTerceiraCertificacao()">Calcular Nota Mínima</button>
+
+    <p id="resultado3Cert"></p>
+  </div>
+
+  <script>
+    function calcularNotaTerceiraCertificacao() {
+      const nota1Cert = parseFloat(document.getElementById("nota1Cert").value);
+      const nota2Cert = parseFloat(document.getElementById("nota2Cert").value);
+      const mediaDesejada = parseFloat(document.getElementById("mediaDesejada").value) || 6; // Valor padrão é 6 se não for especificado
+
+      if (isNaN(nota1Cert) || isNaN(nota2Cert)) {
+        document.getElementById("resultado3Cert").textContent = "Por favor, insira notas válidas.";
+        return;
+      }
+
+      const notaMinima3Cert = (mediaDesejada * 10 - (3 * nota1Cert + 3 * nota2Cert)) / 4;
+
+      document.getElementById("resultado3Cert").textContent = `Você precisa tirar pelo menos ${notaMinima3Cert.toFixed(2)} na terceira certificação para alcançar a média desejada de ${mediaDesejada.toFixed(2)}.`;
+    }
+  </script>
+ <!-- colocar um p que diz sobre a média desejada -->
+</body>
+</html>

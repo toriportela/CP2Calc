@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="style.css" />
+<link rel="shortcut icon" type="imagex/png" href="logocalc.png">
+<title>Nota mínima PFV</title>
+</head>
+<body>
+
+<div class="padrao">
+  <h2>Cálculo da nota mínima pra prova final</h2>
+  <p>Insira a média anual do aluno:</p>
+
+  <label for="mediaAnual">Média Anual:</label>
+  <input type="number" id="mediaAnual" step="0.01"><br>
+
+  <button onclick="calcularNotaProvaFinal()">Calcular Nota Final</button>
+
+  <p id="resultado"></p>
+</div>
+
+<script>
+
+function calcularNotaProvaFinal() {
+  const mediaAnual = parseFloat(document.getElementById("mediaAnual").value);
+
+  if (isNaN(mediaAnual)) {
+    document.getElementById("resultado").textContent = "Por favor, insira uma média anual válida.";
+    return;
+  }
+
+  if (mediaAnual < 6) {
+    let notaProvaFinal = 0;
+
+    while ((3 * mediaAnual + 2 * notaProvaFinal) / 5 < 5) {
+      notaProvaFinal += 0.01;
+    }
+
+    document.getElementById("resultado").textContent = `Você precisa tirar pelo menos ${notaProvaFinal.toFixed(2)} na prova final para passar de ano.`;
+  } else {
+    document.getElementById("resultado").textContent = "Parabéns! Você já passou de ano e não precisa da prova final.";
+  }
+}
+</script>
+</body>
+</html>

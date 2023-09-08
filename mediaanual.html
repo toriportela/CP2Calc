@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="style.css" />
+<link rel="shortcut icon" type="imagex/png" href="logocalc.png">
+<title>Média Anual</title>
+</head>
+<body>
+
+<div class="padrao">
+  <h2>Cálculo da Média Anual</h2>
+  <p>Insira as suas notas:</p>
+
+  <label for="nota1">1ª Certificação:</label>
+  <input type="number" id="nota1" step="0.01"><br>
+
+  <label for="nota2">2ª Certificação:</label>
+  <input type="number" id="nota2" step="0.01"><br>
+
+  <label for="nota3">3ª Certificação:</label>
+  <input type="number" id="nota3" step="0.01"><br>
+
+  <button onclick="calcularMediaAnual()">Calcular Média Anual</button>
+
+  <p id="mediaAnualResultado"></p>
+</div>
+
+<script>
+
+function calcularMediaAnual() {
+  const nota1 = parseFloat(document.getElementById("nota1").value);
+  const nota2 = parseFloat(document.getElementById("nota2").value);
+  const nota3 = parseFloat(document.getElementById("nota3").value);
+
+  if (isNaN(nota1) || isNaN(nota2) || isNaN(nota3)) {
+    document.getElementById("mediaAnualResultado").textContent = "Por favor, insira notas válidas.";
+    return;
+  }
+
+  const mediaAnual = (3 * nota1 + 3 * nota2 + 4 * nota3) / 10;
+  document.getElementById("mediaAnualResultado").textContent = `A sua média anual é: ${mediaAnual.toFixed(2)}`;
+}
+</script>
+</body>
+</html>

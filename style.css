@@ -1,0 +1,168 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "JetBrains Mono", monospace;
+  background-color: rgb(196, 197, 216);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+
+footer {
+  font-weight: bold;
+  background-color: #272957; 
+  color: #fff; 
+  text-align: center; 
+  padding: 10px 0; 
+  position: absolute; 
+  bottom: 0; 
+  width: 100%; 
+}
+.logo {
+  width: 130px;
+  height: 130px;
+  margin-top: 20px;
+  border-radius: 55px;
+  margin-bottom: 15px;
+}
+
+a {
+  text-decoration: none;
+  color: #272957
+}
+
+button {
+  margin: 12px;
+  align-items: center;
+  appearance: none;
+  background-color: #FCFCFD;
+  border-radius: 4px;
+  border-width: 0;
+  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: "JetBrains Mono", monospace;
+  height: 48px;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow .15s, transform .15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow, transform;
+  font-size: 18px;
+  align-self: center;
+}
+
+button:focus {
+  box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+}
+
+button:hover {
+  box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+button:active {
+  box-shadow: #D6D6E7 0 3px 7px inset;
+  transform: translateY(2px);
+}
+
+.padrao {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100vh;
+}
+
+.padrao input {
+  margin: 10px;
+  border: none;
+  border-radius: 5px;
+  height: 30px;
+  padding: 5px;
+}
+
+.padrao p {
+  text-align: center;
+  margin: 25px;
+}
+
+.padrao h2 {
+  text-align: center;
+}
+
+
+@media (max-width: 768px) {
+  .logo {
+    width: 100px;
+    height: 100px;
+  }
+
+  button {
+    font-size: 16px;
+    height: 40px;
+  }
+}
+
+
+@media (min-width: 769px) {
+  .logo {
+    width: 130px;
+    height: 130px;
+  }
+
+  button {
+    font-size: 18px;
+    height: 48px;
+  }
+}
+
+.rodape {
+  text-decoration: none;
+  position: relative;
+  font-size: 17px;
+}
+
+.rodape::before {
+  content: '';
+  background-color: #27295748;
+  position: absolute;
+  left: 0;
+  bottom: 3px;
+  width: 100%;
+  height: 8px;
+  z-index: -1;
+}
+
+.rodape:hover::before {
+  bottom: 0;
+  height: 100%;
+}
+
+.rodape::before {
+  content: '';
+  background-color: #27295748;
+  position: absolute;
+  left: 0;
+  bottom: 3px;
+  width: 100%;
+  height: 8px;
+  z-index: -1;
+  transition: all .3s ease-in-out;
+}
