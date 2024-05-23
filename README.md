@@ -8,4 +8,6 @@ Recursos:
 - Calcula a nota mínima pra PFV
 - Simula o boletim
 
+- Acesse: https://toriportela.github.io/CP2Calc/
+
 -----------------------------------------------------------------------------------------
